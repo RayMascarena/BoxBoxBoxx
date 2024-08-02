@@ -46,7 +46,7 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
     });
 });
 
-/*
+
 let cartQuantity = 0;
 
 cart.forEach((cartItem) => {
@@ -55,4 +55,3 @@ cart.forEach((cartItem) => {
 
 document.querySelector('.js-quantity-display')
     .innerHTML = `(${cartQuantity} items)`;
-*/
