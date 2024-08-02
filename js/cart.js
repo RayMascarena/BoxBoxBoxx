@@ -1,4 +1,4 @@
-
+/*
 export let cart = [{
         productId: '1',
         quantity: 2
@@ -7,8 +7,8 @@ export let cart = [{
         productId: '2',
         quantity: 1
     }];
+*/
 
-/*
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
@@ -25,7 +25,7 @@ if (!cart) {
 function saveToStorage() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
-*/
+
 
 export function addToCart(productId) {
     let matchingItem;
@@ -45,7 +45,7 @@ export function addToCart(productId) {
         });
     }
 
-    //saveToStorage();
+    saveToStorage();
 }
 
 export function removeFromCart(productId) {
@@ -59,5 +59,5 @@ export function removeFromCart(productId) {
 
     cart = newCart;
 
-    //saveToStorage();
+    saveToStorage();
 }
