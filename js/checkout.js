@@ -1,4 +1,4 @@
-import {cart, removeFromCart, calculateCartQuantity} from './cart.js';
+import {cart, removeFromCart} from './cart.js';
 import {products} from './products.js';
 
 let cartSummaryHTML = '';
