@@ -46,7 +46,11 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
 });
 
 function updateCartQuantity() {
-    const cartQuantity = calculateCartQuantity();
+    let cartQuantity = '';
+
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
+    });
 
     document.querySelector('.js-quantity-display')
         .innerHTML = `(${cartQuantity} items)`;
