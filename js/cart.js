@@ -13,12 +13,12 @@ export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
     cart = [{
-        productId: '',
-        quantity: ''
+        productId: '1',
+        quantity: 2
     },
     {
-        productId: '',
-        quantity: ''
+        productId: '2',
+        quantity: 1
     }];
 }
 
