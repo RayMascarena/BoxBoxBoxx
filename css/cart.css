@@ -137,11 +137,6 @@
   cursor: pointer;
 }
 
-input {
-  color: #FFFFFF;
-  background-color: #f26522;
-}
-
 @media only screen and (max-width: 400px) {
   .cart {
     max-width: 100%;
