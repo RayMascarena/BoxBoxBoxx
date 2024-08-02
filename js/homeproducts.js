@@ -49,3 +49,5 @@ document.querySelectorAll('.js-add-cart').forEach((button) => {
         updateCartQuantity();
     });
 });
+
+updateCartQuantity();
