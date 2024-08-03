@@ -1,6 +1,8 @@
 import {cart, removeFromCart} from './cart.js';
 import {products} from './products.js';
+
 let cartSummaryHTML = '';
+
 cart.forEach((cartItem) => {
     const productId = cartItem.productId;
     let matchingProduct;
@@ -9,6 +11,7 @@ cart.forEach((cartItem) => {
             matchingProduct = product;
         }
     });
+    
     cartSummaryHTML += `
         <div class="product-box-checkout js-cart-item-container-${matchingProduct.id}">
             <img class="product-img" src="${matchingProduct.image}">
@@ -27,7 +30,10 @@ cart.forEach((cartItem) => {
         </div>
     `;
 });
+
 document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
+
+
 document.querySelectorAll('.js-delete-link').forEach((link) => {
     link.addEventListener('click', () => {
         const productId = link.dataset.productId;
