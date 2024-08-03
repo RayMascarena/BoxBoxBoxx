@@ -1,19 +1,14 @@
 import {cart, removeFromCart} from './cart.js';
 import {products} from './products.js';
-
 let cartSummaryHTML = '';
-
 cart.forEach((cartItem) => {
     const productId = cartItem.productId;
-
     let matchingProduct;
-
     products.forEach((product) => {
         if (product.id === productId) {
             matchingProduct = product;
         }
     });
-
     cartSummaryHTML += `
         <div class="product-box-checkout js-cart-item-container-${matchingProduct.id}">
             <img class="product-img" src="${matchingProduct.image}">
@@ -27,33 +22,32 @@ cart.forEach((cartItem) => {
             <div></div>
             <span class="delete-quantity-link link-primary js-delete-link" 
                 data-product-id="${matchingProduct.id}">Delete</span>
+            <span class="update-quantity-link link-primary">Update</span>
             </div>
         </div>
     `;
 });
-
-
 document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
-
 document.querySelectorAll('.js-delete-link').forEach((link) => {
     link.addEventListener('click', () => {
         const productId = link.dataset.productId;
         removeFromCart(productId);
 
-        const container = document.querySelector(`.js-cart-item-container-${productId}`);
-        container.remove();
-    });
-});
+         const container = document.querySelector(`.js-cart-item-container-${productId}`);
+         container.remove();
+         updateCartQuantity();
+     });
+ });
 
-function updateCartQuantity() {
-    let cartQuantity = '';
+ function updateCartQuantity() {
+     let cartQuantity = 0;
 
-    cart.forEach((cartItem) => {
-        cartQuantity += cartItem.quantity;
-    });
+     cart.forEach((cartItem) => {
+         cartQuantity += cartItem.quantity;
+     });
 
-    document.querySelector('.js-quantity-display')
-        .innerHTML = `(${cartQuantity} items)`;
-}
+     document.querySelector('.js-quantity-display')
+         .innerHTML = `(${cartQuantity} items)`;
+ }
 
-updateCartQuantity();
+ updateCartQuantity();
