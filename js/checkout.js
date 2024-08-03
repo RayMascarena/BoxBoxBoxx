@@ -25,7 +25,6 @@ cart.forEach((cartItem) => {
             <div></div>
             <span class="delete-quantity-link link-primary js-delete-link" 
                 data-product-id="${matchingProduct.id}">Delete</span>
-            <span class="update-quantity-link link-primary">Update</span>
             </div>
         </div>
     `;
