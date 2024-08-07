@@ -37,7 +37,7 @@ export function renderPaymentSummary() {
         </div>
 
         <div class="payment-summary-row">
-            <div>Estimated tax (10%):</div>
+            <div>Estimated tax (10%): &#160 </div>
             <div class="payment-summary-money">$${(Math.round(taxCents) / 100).toFixed(2)}</div>
         </div>
 
