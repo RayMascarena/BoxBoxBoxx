@@ -48,7 +48,7 @@ export function renderPaymentSummary() {
 
         <div class="order-button">
             <a href="success.html">
-                <button class="place-order-button button-primary js-order-button">
+                <button class="place-order-button button-primary">
                     Place your order
                 </button>
             </a>
