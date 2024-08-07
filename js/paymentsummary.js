@@ -17,9 +17,13 @@ export function renderPaymentSummary() {
 
   const paymentSummaryHTML = `
         <div class="payment-summary-title">
-            <h1 class="display-1 display-1--light">
+            <h1 class="summary-text display-1 display-1--light">
                 Order Summary
             </h1>
+        </div>
+
+        <div class="quantity-row">
+            <span class="js-quantity-display"></span>
         </div>
 
         <div class="payment-summary-row subtotal-row">
