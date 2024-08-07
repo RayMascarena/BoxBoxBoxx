@@ -59,5 +59,3 @@ export function renderPaymentSummary() {
 
     updateCartQuantity();
 }
-
-document.querySelector('.js-order-button').addEventListener('click', clearCart);
