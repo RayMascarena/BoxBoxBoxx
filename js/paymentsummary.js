@@ -1,4 +1,4 @@
-import {cart, updateCartQuantity} from './cart.js';
+import {cart, updateCartQuantity, clearCart} from './cart.js';
 import {products, getProduct} from './products.js';
 import {renderOrderSummary} from './ordersummary.js';
 
@@ -57,7 +57,7 @@ export function renderPaymentSummary() {
 
     document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 
-    document.querySelector('.js-order-button').cart.empty();
+    document.querySelector('.js-order-button').addEventListener('click', clearCart);
 
     updateCartQuantity();
 }
