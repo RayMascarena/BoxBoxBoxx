@@ -58,13 +58,3 @@ export function updateCartQuantity() {
     document.querySelector('.js-quantity-display')
         .innerHTML = `${cartQuantity} items`;
 }
-
-/*
-export function clearCart() {
-  let cart = [];
-
-  document.querySelector('.js-order-button').addEventListener('click', clearCart);
-
-  saveToStorage();
-}
-*/
