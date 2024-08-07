@@ -3,3 +3,4 @@ import {renderPaymentSummary} from './paymentsummary.js';
 
 renderOrderSummary();
 renderPaymentSummary();
+localStorage.clear();
