@@ -137,6 +137,41 @@
   cursor: pointer;
 }
 
+.summary-container {
+  display: flex;
+  max-width: 100rem;
+  padding: 2rem;
+  margin-left: 4rem;
+}
+
+.payment-summary {
+  border: 1px solid #f26522;
+  color: white;
+  margin-top: 2rem;
+  padding: 4.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.payment-summary-row {
+  color: white;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.payment-summary-title {
+  color: #FFFFFF;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
 @media only screen and (max-width: 400px) {
   .cart {
     max-width: 100%;
