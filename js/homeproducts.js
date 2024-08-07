@@ -3,13 +3,13 @@ import {products} from './products.js';
 
 let productsHTML = '';
 
-products.forEach((product) => {
+products.slice(0, 4).forEach((product) => {
     productsHTML += `
         <div class="product-box">
             <img class="product-img" src="${product.image}">
             <h2 class="product-title">${product.name}</h2>
             <div class="space-between">
-                <span class="price">$${(product.price / 100).toFixed(2)}</span>
+                <span class="price">$${(Math.round(product.priceCents) / 100).toFixed(2)}</span>
                 <select class="size-input js-size-selector-${product.id}">
                     <option selected value>Size</option>
                     <option value="1">S</option>
