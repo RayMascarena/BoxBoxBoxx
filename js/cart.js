@@ -48,12 +48,6 @@ export function removeFromCart(productId) {
     saveToStorage();
 }
 
-export function clearCart() {
-  cart = [];
-
-  saveToStorage();
-}
-
 export function updateCartQuantity() {
     let cartQuantity = 0;
 
@@ -65,3 +59,8 @@ export function updateCartQuantity() {
         .innerHTML = `${cartQuantity} items`;
 }
 
+export function clearCart() {
+  cart = [];
+
+  saveToStorage();
+}
