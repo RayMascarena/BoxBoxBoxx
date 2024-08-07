@@ -57,7 +57,7 @@ export function renderPaymentSummary() {
 
     document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 
-    document.querySelector('.js-order-button').addEventListener('click', clearCart);
-
     updateCartQuantity();
 }
+
+document.querySelector('.js-order-button').addEventListener('click', clearCart);
