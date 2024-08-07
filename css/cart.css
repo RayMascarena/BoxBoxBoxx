@@ -162,7 +162,12 @@
 .payment-summary-title {
   color: #FFFFFF;
   margin-top: 2rem;
+  margin-bottom: 0;
   text-align: center;
+}
+
+.summary-text {
+  margin-bottom: 1rem;
 }
 
 .order-button {
