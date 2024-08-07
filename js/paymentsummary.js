@@ -48,7 +48,7 @@ export function renderPaymentSummary() {
 
         <div class="order-button">
             <a href="success.html">
-                <button class="place-order-button button-primary">
+                <button class="place-order-button button-primary js-order-button">
                     Place your order
                 </button>
             </a>
@@ -56,6 +56,8 @@ export function renderPaymentSummary() {
     `;
 
     document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
+
+    document.querySelector('.js-order-button').cart.empty();
 
     updateCartQuantity();
 }
