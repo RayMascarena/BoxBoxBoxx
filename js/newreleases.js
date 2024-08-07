@@ -1,10 +1,9 @@
 import {cart, addToCart} from './cart.js';
 import {products} from './products.js';
 
-
 let productsHTML = '';
 
-products.slice(28).forEach((product) => {
+products.slice(16, 20).forEach((product) => {
     productsHTML += `
         <div class="product-box">
             <img class="product-img" src="${product.image}">
@@ -28,7 +27,7 @@ products.slice(28).forEach((product) => {
     `;
 });
 
-document.querySelector('.js-accessories-grid').innerHTML = productsHTML;
+document.querySelector('.js-newreleases-grid').innerHTML = productsHTML;
 
 
 function updateCartQuantity() {

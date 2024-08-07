@@ -2,6 +2,7 @@ import {cart, addToCart} from './cart.js';
 import {products} from './products.js';
 
 
+
 let productsHTML = '';
 
 products.slice(0, 16).forEach((product) => {
@@ -50,3 +51,4 @@ document.querySelectorAll('.js-add-cart').forEach((button) => {
 });
 
 updateCartQuantity();
+

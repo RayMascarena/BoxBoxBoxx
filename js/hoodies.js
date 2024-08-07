@@ -6,7 +6,7 @@ let productsHTML = '';
 
 products.slice(16, 28).forEach((product) => {
     productsHTML += `
-        <div class="product-box-light">
+        <div class="product-box">
             <img class="product-img" src="${product.image}">
             <h2 class="product-title">${product.name}</h2>
             <div class="space-between">
