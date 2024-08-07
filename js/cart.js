@@ -59,8 +59,12 @@ export function updateCartQuantity() {
         .innerHTML = `${cartQuantity} items`;
 }
 
+/*
 export function clearCart() {
-  cart = [];
+  let cart = [];
+
+  document.querySelector('.js-order-button').addEventListener('click', clearCart);
 
   saveToStorage();
 }
+*/
