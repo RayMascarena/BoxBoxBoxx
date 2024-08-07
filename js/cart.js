@@ -56,6 +56,6 @@ export function updateCartQuantity() {
     });
 
     document.querySelector('.js-quantity-display')
-        .innerHTML = `(${cartQuantity} items)`;
+        .innerHTML = `${cartQuantity} items`;
 }
 
