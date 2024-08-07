@@ -115,26 +115,26 @@ export const products = [
 },
 {
     id: '18',
-    image: 'images/products/boxboxboxxhoodie.JPG',
-    name: 'BoxBoxBoxx <br> Hoodie',
-    priceCents: 5899
-},
-{
-    id: '19',
     image: 'images/products/ballislifehoodie.JPG',
     name: 'Ball is Lando <br> Hoodie',
     priceCents: 5899
 },
 {
-    id: '20',
+    id: '19',
     image: 'images/products/smoothoperatorhoodie.JPG',
     name: 'Smooth Operator <br> Hoodie',
     priceCents: 5899
 },
 {
-    id: '21',
+    id: '20',
     image: 'images/products/leclerchoodie.JPG',
     name: 'Charles Leclerc <br> Hoodie',
+    priceCents: 5899
+},
+{
+    id: '21',
+    image: 'images/products/boxboxboxxhoodie.JPG',
+    name: 'BoxBoxBoxx <br> Hoodie',
     priceCents: 5899
 },
 {
