@@ -1,17 +1,17 @@
-import {cart} from './cart.js';
-import {hoodies} from './products.js';
+import {cart, addToCart} from './cart.js';
+import {products} from './products.js';
 
 
-let hoodiesHTML = '';
+let productsHTML = '';
 
-hoodies.forEach((hoodie) => {
-    hoodiesHTML += `
-        <div class="product-box">
-            <img class="product-img" src="${hoodie.image}">
-            <h2 class="product-title">${hoodie.name}</h2>
+products.slice(16, 28).forEach((product) => {
+    productsHTML += `
+        <div class="product-box-light">
+            <img class="product-img" src="${product.image}">
+            <h2 class="product-title">${product.name}</h2>
             <div class="space-between">
-                <span class="price">$${(hoodie.price / 100).toFixed(2)}</span>
-                <select class="size-input js-size-selector-${hoodie.id}">
+                <span class="price">$${(Math.round(product.priceCents) / 100).toFixed(2)}</span>
+                <select class="size-input js-size-selector-${product.id}">
                     <option selected value>Size</option>
                     <option value="1">S</option>
                     <option value="2">M</option>
@@ -20,7 +20,7 @@ hoodies.forEach((hoodie) => {
                     <option value="5">2XL</option>
                     <option value="6">3XL</option>
                 </select>
-                <button type="button" class="add-cart js-add-hoodie" data-product-id="${hoodie.id}">
+                <button type="button" class="add-cart js-add-cart" data-product-id="${product.id}">
                     <img class="cartadd" src="images/cartadd.svg">
                 </button>
             </div>
@@ -28,36 +28,27 @@ hoodies.forEach((hoodie) => {
     `;
 });
 
-document.querySelector('.js-hoodies-grid').innerHTML = hoodiesHTML;
+document.querySelector('.js-hoodies-grid').innerHTML = productsHTML;
 
 
-document.querySelectorAll('.js-add-hoodie').forEach((button) => {
+function updateCartQuantity() {
+    let cartQuantity = 0;
+
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
+    });
+
+    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
+
+
+document.querySelectorAll('.js-add-cart').forEach((button) => {
     button.addEventListener('click', () => {
-        const hoodieId = button.dataset.hoodieId;
+        const productId = button.dataset.productId;
 
-        let matchingItem;
-
-        cart.forEach((item) => {
-            if (hoodieId === item.hoodieId) {
-                matchingItem = item;
-            }
-        });
-
-        if (matchingItem) {
-            matchingItem.quantity += 1;
-        } else {
-            cart.push({
-                hoodieId: hoodieId,
-                quantity: 1
-            });
-        }
-
-        let cartQuantity = 0;
-
-        cart.forEach((item) => {
-            cartQuantity += item.quantity;
-        });
-
-        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+        addToCart(productId);
+        updateCartQuantity();
     });
 });
+
+updateCartQuantity();
