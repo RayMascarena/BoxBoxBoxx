@@ -188,7 +188,7 @@ export const products = [
 {
     id: '30',
     image: 'images/products/schumacherposter.JPG',
-    name: 'Michael Schumacher <br> Poster',
+    name: 'Schumacher <br> Poster',
     priceCents: 2899
 },
 {
