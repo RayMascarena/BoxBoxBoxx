@@ -2237,6 +2237,12 @@ html.cl-loaded .home-content__main {
 }
  
 @media only screen and (max-width:600px) {
+    .s-home {
+        background-image: url(../images/bbbf1car.jpg);
+        background-size: 700%;
+        background-position: top, center;
+    }
+     
     .home-content {
         vertical-align: middle;
         padding-top: 19.8rem;
