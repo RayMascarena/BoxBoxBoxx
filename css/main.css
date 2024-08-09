@@ -2237,11 +2237,6 @@ html.cl-loaded .home-content__main {
 }
  
 @media only screen and (max-width:600px) {
-    .s-home {
-        background-image: url(../images/bbbf1car.jpg);
-        background-size: 700%;
-        background-position: top, center;
-    }
      
     .home-content {
         vertical-align: middle;
@@ -2283,8 +2278,19 @@ html.cl-loaded .home-content__main {
 }
  
 @media only screen and (max-width:500px) {
+
+    .s-home {
+        background-image: url(../images/bbbf1car.jpg);
+        background-size: 500%;
+        background-position: top, center;
+    }
+ 
     .s-home {
         min-height: 654px;
+    }
+
+    .home-header {
+        display: none;
     }
  
     .home-content h1 {
