@@ -8,7 +8,7 @@ let productsHTML = '';
 products.slice(0, 16).forEach((product) => {
     productsHTML += `
         <div class="product-box">
-            <a href="https://raymascarena.github.io/BoxBoxBoxx/${product.image}" target="_blank">
+            <a href="https://raymascarena.github.io/BBB/${product.image}" target="_blank">
                 <img class="product-img" src="${product.image}">
             </a>
             <h2 class="product-title">${product.name}</h2>
