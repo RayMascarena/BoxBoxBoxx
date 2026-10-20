@@ -11,15 +11,7 @@ newProducts.forEach((newProduct) => {
             <h2 class="product-title">${newProduct.name}</h2>
             <div class="space-between">
                 <span class="price">$${(newProduct.price / 100).toFixed(2)}</span>
-                <select class="size-input js-size-selector-${newProduct.id}">
-                    <option selected value>Size</option>
-                    <option value="1">S</option>
-                    <option value="2">M</option>
-                    <option value="3">L</option>
-                    <option value="4">XL</option>
-                    <option value="5">2XL</option>
-                    <option value="6">3XL</option>
-                </select>
+
                 <button type="button" class="add-cart js-add-np" data-product-id="${newProduct.id}">
                     <img class="cartadd" src="images/cartadd.svg">
                 </button>
